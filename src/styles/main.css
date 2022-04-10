@@ -1,0 +1,202 @@
+.app{
+    width: 100%;
+}
+
+header{
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
+
+header > h1{
+    line-height: 10vh;
+    margin-left: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 45vw;
+    height: 100%;
+    
+}
+
+main > .createPostDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid #999999;
+}
+
+main > .createPostDiv > .createPostContent{
+    height: 100%;
+    width: 90%;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 80px;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btnActived{
+
+    width: 111px;
+    height: 33px;
+    
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+
+    background-color: black;
+    color: white;
+    
+    cursor: pointer;
+
+}
+
+.btnDeactived{
+
+    cursor: help;
+
+    width: 111px;
+    height: 33px;
+    
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+
+    background-color:#777777;
+    color: white;
+    
+    cursor: pointer;
+
+}
+
+.post{
+    width: 90%;
+    height: 100%;
+    margin: 20px auto 20px;
+    border: 1px solid #999999;
+
+}
+
+.post > header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post > header > h2{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    line-height: 10vh;
+    margin-left: 20px;
+}
+
+.post > header > .actions{
+    width: 60%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: auto 15px auto 15px;
+}
+
+.post > main{
+    display: flex;
+    justify-content: start;
+    width: 90%;
+    margin: 20px auto 20px;
+}
+
+.post > main > p{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+
+.editPostDiv{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);  
+    border: 1px solid #999999;
+    box-shadow: 2px 2px 10px black;
+
+}
+
+.editPostDiv > .editPostContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 45vw;
+
+
+    border: 1px solid #999999;
+    box-shadow: 2px 2px 10px black;
+
+    margin-top: 20vh;
+}
+
+.editPostDiv > .editPostContent > div{
+    height: 100%;
+    width: 90%;
+}
+
+@media screen and (max-width: 1220px){
+    main{
+        width: 60vw;
+    }
+
+    .editPostDiv > .editPostContent{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        width: 90vw;
+    }
+
+    .editPostDiv > .editPostContent{
+        width: 90vw;
+    }
+}

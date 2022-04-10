@@ -1,0 +1,102 @@
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #CCCCCC;
+    background-color: white;
+
+    width: 35vw;
+    height: 80%;
+
+    margin: 50px auto 50px;
+
+}
+
+.signupContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+
+.signupContent > p{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+input{
+    outline: none;
+    border: solid 1px #777777;
+    width: 28vw;
+    height: 28px;
+    margin-top: 10px;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btnActived{
+
+    width: 111px;
+    height: 33px;
+    
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+
+    background-color: black;
+    color: white;
+    
+    cursor: pointer;
+
+}
+
+.btnDeactived{
+
+    cursor: help;
+
+    width: 111px;
+    height: 33px;
+    
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+
+    background-color:#777777;
+    color: white;
+    
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 800px){
+    .signup{
+        width: 70vw;
+    }
+    input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .signup{
+        width: 95vw;
+    }
+    input{
+        width: 100%;
+    }
+}

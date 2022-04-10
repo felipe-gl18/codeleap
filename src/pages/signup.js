@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../styles/signup.css';
 
@@ -8,9 +8,18 @@ import { addUser } from '../redux/features/users';
 
 export function Signup({usernameState, setUsernameState}){
 
+    const [btnState, setBtnState] = useState(true);
+
     const dispatch = useDispatch();
     
     function handleUsernameState(e){   
+
+        if(e.target.value. length > 0){
+            setBtnState(false)
+        }else{
+            setBtnState(true)
+        }
+
         e.target.value ? setUsernameState(true) : setUsernameState(false);
     }
 
@@ -34,7 +43,7 @@ export function Signup({usernameState, setUsernameState}){
 
                 <Link to="/home">
                     <div className='btnDiv'>
-                        <button className={`${usernameState ? 'btnActived' : 'btnDeactived'}`} onClick={handleUsernameValue} type='submit'>ENTER</button>
+                        <button className={`${usernameState ? 'btnActived' : 'btnDeactived'}`} onClick={handleUsernameValue} type='submit' disabled={btnState}>ENTER</button>
                     </div>
                 </Link>
             </div>

@@ -16,7 +16,8 @@ export function Main({
                     showEditModal
                 }){
 
-    const username = useSelector(state => state.users.value)
+    const [btnState, setBtnState] = useState(true);
+    const username = useSelector(state => state.users.value);
 
     function handlePostSubmit(){
         setPost([
@@ -31,15 +32,31 @@ export function Main({
 
         document.getElementById('titleInput').value = "";
         document.getElementById('contentInput').value = "";
+
         setContentFieldState(false)
         setTitleFieldState(false)
+        setBtnState(true)
     }
 
     function handleTitleFieldState(e){
+
+        if(e.target.value != ""){
+            setBtnState(false)
+        }else{
+            setBtnState(true)
+        }
+
         e.target.value ? setTitleFieldState(true) : setTitleFieldState(false)
     }
 
     function handleContentFieldState(e){
+
+        if(e.target.value != ""){
+            setBtnState(false)
+        }else{
+            setBtnState(true)
+        }
+
         e.target.value ? setContentFieldState(true) : setContentFieldState(false)
     }
 
@@ -71,7 +88,8 @@ export function Main({
                         <div className='btnDiv'>
                             <button className={`${titleFieldState ? contentFieldState ? 'btnActived':'btnDeactived' : 'btnDeactived'}`} 
                                     onClick={handlePostSubmit}
-                                    type='submit' 
+                                    type='submit'
+                                    disabled={btnState}
                             >
                                     ENTER
                             
